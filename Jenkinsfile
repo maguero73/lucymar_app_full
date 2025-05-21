@@ -10,7 +10,7 @@ pipeline {
             steps {
                 dir('backend') {
                     sh 'mvn clean package'
-                    sh 'docker build -t mi-backendgastos-java2 .'
+                    sh 'docker build -t backend .'
                 }
             }
         }
@@ -18,7 +18,7 @@ pipeline {
         stage('Construir frontend') {
             steps {
                 dir('frontend') {
-                    sh 'docker build -t mi-frontendgastos-vue .'
+                    sh 'docker build -t frontend .'
                 }
             }
         }
