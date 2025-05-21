@@ -1,0 +1,44 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Funcion Bind</title><script defer="defer" src="/js/chunk-vendors.ae224b87.js"></script><script defer="defer" src="/js/funcion_bind.5136f905.js"></script><link href="/css/funcion_bind.f8c74916.css" rel="stylesheet"></head><script src="Jquery/jquery-3.7.1.min.js"></script><script>$(document).ready(function(){
+
+  
+  
+var v_img1=$("#imagen1").attr("src");
+
+ $("#imagen_grande").hide();
+
+$("#imagen1").bind("click", v_img1, abreimagen);
+
+
+
+
+
+});
+
+
+function abreimagen(e){
+
+  e.stopPropagation();
+
+  $("#imagen_grande").fadeIn(1000);
+
+  $("#img_sustitucion").replaceWith("<img src='" + e.data + "' width='700' height='405'>");
+
+
+
+}
+
+$(document).on("click keydown", function(event) {
+  if (event.type === "click") {
+    // Manejar el clic
+    $("#imagen_grande").fadeOut(1000);
+  } else if (event.type === "keydown") {
+    if (event.key === "Escape" || event.keyCode === 27) {
+      // Manejar la tecla Escape
+      $("#imagen_grande").fadeOut(1000);
+    } else {
+      // Manejar otras teclas
+      $("#imagen_grande").fadeOut(1000);
+      // Aquí puedes agregar la lógica que desees para otras teclas
+    }
+  }
+});</script><body><div id="imagen_grande"><img src="" id="img_sustitucion"></div><p>Como un cuento veo a la gente caer En esta lluvia que lavó este mar Como un cuento de una historia más De almas enamorando el final Nunca te vi baldear el corazón Un chalchalero no es un rolling stone Debe haber un gran error Yo no lo sé Debe haber un gran error Si De secretos y clandestinidad Doble vida de un ser o no ser Nunca se el tiempo que va a venir Y una bala con visa en la paz Nunca te vi baldear el corazón Un chalchalero no es un rolling stone Debe haber un gran error Como un cuento veo a la gente caer En esta lluvia que lavó este mar Como un cuento de una historia más De almas enamorando el final Nunca te vi baldear el corazón Un chalchalero no es un rolling stone Debe haber un gran error Yo no lo sé Debe haber un gran error Si De secretos y clandestinidad Doble vida de un ser o no ser Nunca se el tiempo que va a venir Y una bala con visa en la paz Nunca te vi baldear el corazón Un chalchalero no es un rolling stone Debe haber un gran error</p><table border="0"><tr><td><img src="3.jpeg" width="150" height="100" id="imagen1"></td></tr></table><p>Como un cuento veo a la gente caer En esta lluvia que lavó este mar Como un cuento de una historia más De almas enamorando el final Nunca te vi baldear el corazón Un chalchalero no es un rolling stone Debe haber un gran error Yo no lo sé Debe haber un gran error Si De secretos y clandestinidad Doble vida de un ser o no ser Nunca se el tiempo que va a venir Y una bala con visa en la paz Nunca te vi baldear el corazón Un chalchalero no es un rolling stone Debe haber un gran error Como un cuento veo a la gente caer En esta lluvia que lavó este mar Como un cuento de una historia más De almas enamorando el final Nunca te vi baldear el corazón Un chalchalero no es un rolling stone Debe haber un gran error Yo no lo sé Debe haber un gran error Si De secretos y clandestinidad Doble vida de un ser o no ser Nunca se el tiempo que va a venir Y una bala con visa en la paz Nunca te vi baldear el corazón Un chalchalero no es un rolling stone Debe haber un gran error</p><p>Como un cuento veo a la gente caer En esta lluvia que lavó este mar Como un cuento de una historia más De almas enamorando el final Nunca te vi baldear el corazón Un chalchalero no es un rolling stone Debe haber un gran error Yo no lo sé Debe haber un gran error Si De secretos y clandestinidad Doble vida de un ser o no ser Nunca se el tiempo que va a venir Y una bala con visa en la paz Nunca te vi baldear el corazón Un chalchalero no es un rolling stone Debe haber un gran error</p></body></html>
