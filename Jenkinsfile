@@ -6,13 +6,6 @@ pipeline {
     }
 
     stages {
-        stage('Clonar Repo') {
-            steps {
-                git branch: 'master',
-                    url: 'https://github.com/maguero73/lucymar_app_full.git'
-            }
-        }
-
         stage('Construir backend') {
             steps {
                 dir('backend') {
