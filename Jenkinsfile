@@ -15,14 +15,18 @@ pipeline {
 
         stage('Construir backend') {
             steps {
-                sh 'cd backend && mvn clean package'
-                sh 'docker build -t mi-backendgastos-java2 ./backend'
+                dir('backend') {
+                    sh 'mvn clean package'
+                    sh 'docker build -t mi-backendgastos-java2 .'
+                }
             }
         }
 
         stage('Construir frontend') {
             steps {
-                sh 'docker build -t mi-frontendgastos-vue ./frontend'
+                dir('frontend') {
+                    sh 'docker build -t mi-frontendgastos-vue .'
+                }
             }
         }
 
