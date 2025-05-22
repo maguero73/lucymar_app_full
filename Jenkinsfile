@@ -8,8 +8,8 @@ pipeline {
     stages {
         stage('Clonar Repo') {
             steps {
-                // Jenkins ya clona el repo automáticamente si usás Pipeline from SCM
-                echo 'Repositorio clonado automáticamente por Jenkins.'
+                // Clonado Manual
+                git url: 'https://github.com/maguero73/lucymar_app_full.git', branch: 'master'
                 sh 'ls -la' // Verificamos que estemos en un repo Git
             }
         }
@@ -22,8 +22,11 @@ pipeline {
             }
             steps {
                 dir('backend') {
+                    // MOSTRAR CONTENIDO REAL DE backend
+                    sh 'ls -la'
                     sh 'mvn clean package'
                     sh 'docker build -t backend .'
+
                 }
             }
         }

@@ -34,17 +34,17 @@ services:
       - red-gastos
 
   jenkins:
-    image: jenkins/jenkins:lts
+    image: jenkins-con-docker-cli
     container_name: jenkins
     user: root  # necesario para acceder al socket Docker
     ports:
-      - "8083:8080"    # Jenkins Web
-      - "50000:50000"  # Jenkins agente (opcional)
+      - "8083:8080"
+      - "50000:50000"
     volumes:
       - jenkins_home:/var/jenkins_home
-      - /var/run/docker.sock:/var/run/docker.sock  # acceso a Docker del host
+      - /var/run/docker.sock:/var/run/docker.sock
     environment:
-      - DOCKER_HOST=unix:///var/run/docker.sock    
+      - DOCKER_HOST=unix:///var/run/docker.sock
     networks:
       - red-gastos
 
@@ -52,8 +52,7 @@ networks:
   red-gastos:
     driver: bridge
 
-user: root
 volumes:
-  -     jenkins_home:/var/jenkins_home
-  -     /var/run/docker.sock:/var/run/docker.sock
+  jenkins_home:
     external: true
+
