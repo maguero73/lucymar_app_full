@@ -34,7 +34,7 @@ services:
       - red-gastos
 
   jenkins:
-    image: repos-lucymar-app-jenkins
+    image: repos-lucymar-app_jenkins
     container_name: jenkins
     user: root  # necesario para acceder al socket Docker
     ports:
