@@ -1,7 +1,9 @@
 version: '3.3'
 
 services:
-  backend:
+  backend: 
+    build:
+      context: ./backend
     image: mi-backendgastos-java2
     container_name: backend-gastos
     ports:
@@ -14,6 +16,8 @@ services:
       - red-gastos
 
   frontend:
+    build:
+      context: ./frontend
     image: mi-frontendgastos-vue
     container_name: frontend-gastos
     ports:

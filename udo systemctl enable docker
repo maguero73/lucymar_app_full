@@ -1,0 +1,21 @@
+[0;1;32m●[0m docker.service - Docker Application Container Engine
+     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+     Active: [0;1;32mactive (running)[0m since Mon 2025-05-26 16:35:53 -03; 49min ago
+TriggeredBy: [0;1;32m●[0m docker.socket
+       Docs: https://docs.docker.com
+   Main PID: 2497 (dockerd)
+      Tasks: 38
+     Memory: 42.9M
+     CGroup: /system.slice/docker.service
+             └─2497 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+
+may 26 16:35:53 Ubuntu-MSI dockerd[2497]: time="2025-05-26T16:35:53.441927672-03:00" level=warning msg="error locating sandbox id 33a088d8a7c64acc34c324876d8913e1cb3aeca08fd077d36f85965a6c09572a: sandbox 33a088d8a7c64acc34c324876d8913e1cb3aeca08fd077d36f85965a6c09572a not found"
+may 26 16:35:53 Ubuntu-MSI dockerd[2497]: time="2025-05-26T16:35:53.441942264-03:00" level=warning msg="error locating sandbox id 66d854cdea6a5fed369311cb73e314913cb82461fa33a8286128275669380fef: sandbox 66d854cdea6a5fed369311cb73e314913cb82461fa33a8286128275669380fef not found"
+may 26 16:35:53 Ubuntu-MSI dockerd[2497]: time="2025-05-26T16:35:53.442843675-03:00" level=info msg="Loading containers: done."
+may 26 16:35:53 Ubuntu-MSI dockerd[2497]: time="2025-05-26T16:35:53.488271446-03:00" level=warning msg="WARNING: No swap limit support"
+may 26 16:35:53 Ubuntu-MSI dockerd[2497]: time="2025-05-26T16:35:53.488320539-03:00" level=info msg="Docker daemon" commit=01f442b containerd-snapshotter=false storage-driver=overlay2 version=28.1.1
+may 26 16:35:53 Ubuntu-MSI dockerd[2497]: time="2025-05-26T16:35:53.489361402-03:00" level=info msg="Initializing buildkit"
+may 26 16:35:53 Ubuntu-MSI dockerd[2497]: time="2025-05-26T16:35:53.747301375-03:00" level=info msg="Completed buildkit initialization"
+may 26 16:35:53 Ubuntu-MSI dockerd[2497]: time="2025-05-26T16:35:53.754867388-03:00" level=info msg="Daemon has completed initialization"
+may 26 16:35:53 Ubuntu-MSI dockerd[2497]: time="2025-05-26T16:35:53.754925106-03:00" level=info msg="API listen on /run/docker.sock"
+may 26 16:35:53 Ubuntu-MSI systemd[1]: Started Docker Application Container Engine.
